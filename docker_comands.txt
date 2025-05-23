@@ -1,0 +1,44 @@
+## Principais comandos do Docker
+
+Aqui estão os comandos mais utilizados no dia a dia com Docker:
+
+### Gerenciamento de Imagens
+
+- `docker build .` - Constrói uma imagem a partir de um Dockerfile
+- `docker pull [imagem]` - Baixa uma imagem do Docker Hub
+- `docker images` - Lista todas as imagens locais
+- `docker rmi [imagem]` - Remove uma imagem específica
+
+### Gerenciamento de Containers
+
+- `docker run [imagem]` - Cria e inicia um novo container
+- `docker ps` - Lista containers em execução
+- `docker ps -a` - Lista todos os containers (incluindo parados)
+- `docker start [container]` - Inicia um container existente
+- `docker stop [container]` - Para um container em execução
+- `docker rm [container]` - Remove um container
+
+### Logs e Debugging
+
+- `docker logs [container]` - Exibe logs do container
+- `docker exec -it [container] bash` - Acessa o terminal do container
+
+### Opções comuns do docker run
+
+- `-d` - Executa em modo detached (background)
+- `-p [host-port]:[container-port]` - Mapeia portas
+- `-v [host-path]:[container-path]` - Monta volumes
+- `--name [nome]` - Define um nome para o container
+- `-t` - Define uma tag/nome para a imagem durante o build ou execução
+
+### Gerando uma imagem com um nome de indentificação
+docker build -t meuapp .
+# Roda o container
+docker run -p 5000:5000 meuapp
+
+docker ps            # Ver containers em execução
+docker ps -a         # Ver todos os containers (inclusive parados)
+docker images        # Ver imagens baixadas
+docker stop <id>     # Parar container
+docker rm <id>       # Remover container
+docker rmi <imagem>  # Remover imagem
