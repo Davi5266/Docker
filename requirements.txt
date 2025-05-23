@@ -1,5 +1,5 @@
 requests
-#fastapi
+fastapi
 uvicorn
 mysql-connector-python
 python-dotenv
