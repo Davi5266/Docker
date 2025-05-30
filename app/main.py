@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from api.routes import dht, client
+import core.env_config
 
 # Config DB
 from db.base import Base

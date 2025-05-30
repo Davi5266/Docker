@@ -1,7 +1,13 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-DATABASE_URL = f'postgresql+psycopg2://datauser:123456789@127.0.0.1:5432/meubanco'
+import socket
+
+hostname = socket.gethostname()
+IPAddr = socket.gethostbyname(hostname)
+
+# DATABASE_URL = f'postgresql+psycopg2://datauser:123456789@127.0.0.1:5432/meubanco'
+DATABASE_URL = f'postgresql+psycopg2://datauser:123456789@{IPAddr}:5432/meubanco'
 
 engine = create_engine(DATABASE_URL)
 # SessionLocal = sessionmaker(engine)  

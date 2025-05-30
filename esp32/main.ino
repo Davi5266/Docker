@@ -63,14 +63,15 @@ void register_dht(float h, float hic, float hif){
     http.addHeader("Content-Type", "application/json");
         /*
         Resposta Json para o endpoint
-        {"data_hora": "string",
-        "humidade": float,
-	    "temperature_C": float,
-	    "temperature_F": float
+        {
+          "humidade": 0,
+          "temperature_c": 0,
+          "temperature_f": 0,
+          "client_id": 0
         }
         */
        // arquivando dados em json
-    String jsonPayload = "{\"humidade\":" + String(h,2) +",\"temperature_C\":" + String(hic,2) +",\"temperature_F\":" + String(hif,2) +"}";
+    String jsonPayload = "{\"humidade\":" + String(h,2) +",\"temperature_C\":" + String(hic,2) +",\"temperature_F\":" + String(hif,2) +",\"client_id\":\"0\"}";
     int httpResponseCode = http.POST(jsonPayload);
 
     if (httpResponseCode > 0) {
