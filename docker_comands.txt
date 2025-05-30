@@ -42,3 +42,6 @@ docker images        # Ver imagens baixadas
 docker stop <id>     # Parar container
 docker rm <id>       # Remover container
 docker rmi <imagem>  # Remover imagem
+
+# Conectando ao PostgresDB do Docker pelo client psql
+docker-compose exec db psql -U postgres

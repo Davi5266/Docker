@@ -1,24 +1,25 @@
 from fastapi import FastAPI
-import mysql.connector
-import os
+from api.routes import dht, client
+
+# Config DB
+from db.base import Base
+from db import base_model_imports
+from db.session import engine
+# create all tables
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+# Routes
+app.include_router(dht.router)
+app.include_router(client.router)
 
-@app.get("/")
-def home():
-    return {"mensagem": "API funcionando com MySQL!"}
 
-@app.get("/db")
-def testar_conexao():
-    try:
-        conn = mysql.connector.connect(
-            host=os.getenv("DB_HOST"),
-            user=os.getenv("MYSQL_USER"),
-            password=os.getenv("MYSQL_PASSWORD"),
-            database=os.getenv("MYSQL_DATABASE")
-        )
-        conn.close()
-        return {"mensagem": "Conexão com MySQL OK!"}
-    except Exception as e:
-        return {"erro": str(e)}
+if __name__ == "__main__":
+    import uvicorn
 
+    uvicorn.run(
+        "main:app",
+        port=8000,
+        host="0.0.0.0",
+        log_level="info",
+        reload=True)
