@@ -16,13 +16,8 @@ DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
     Serial.begin(115200);
-    // WiFi.begin(ssid, password);
 
     Serial.print("Conectando ao Wi-Fi");
-    // while (WiFi.status() != WL_CONNECTED){
-    //     delay(500);
-    //     Serial.print(".");
-    // }
     connect_wifi();
     Serial.print("\nConectado!");
 
@@ -56,7 +51,6 @@ void loop() {
 void register_dht(float h, float hic, float hif){
     connect_wifi();
 
-    // if (WiFi.status() == WL_CONNECTED){
     HTTPClient http;
 
     http.begin(serverName);

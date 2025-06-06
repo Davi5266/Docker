@@ -4,7 +4,7 @@ from typing import Optional
 
 class DhtOut(BaseModel):
     id: int
-    humidade: float
+    humidity: float
     temperature_c: float
     temperature_f: float
     date_time: datetime
@@ -14,7 +14,7 @@ class DhtOut(BaseModel):
         orm_mode = True
 
 class DhtBase(BaseModel):
-    humidade: float
+    humidity: float
     temperature_c: float
     temperature_f: float
 

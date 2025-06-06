@@ -14,6 +14,10 @@ app = FastAPI()
 app.include_router(dht.router)
 app.include_router(client.router)
 
+@app.get("/")
+def testeClient():
+	print("Client OK")
+	return {"return":"Client OK"}
 
 if __name__ == "__main__":
     import uvicorn

@@ -10,7 +10,7 @@ from schemas.token import Token
 from schemas.client import ClientOut
 from api.deps import get_current_client
 
-# router = APIRouter(prefix="/dht", tags=["dht"])
+#router = APIRouter(prefix="/dht", tags=["dht"])
 # Criando um rota privada
 router = APIRouter(
     prefix="/dht",
@@ -27,7 +27,7 @@ router = APIRouter(
 # def create_dht_record(dht_in: DhtCreate, db: Session = Depends(get_db)):
 #     return create_dht(db, dht_in)
 
-@router.post("/securitycreate", response_model=DhtResponse)
+@router.post("/create", response_model=DhtResponse)
 def security_create_dht_record(dht_in: DhtCreate, db: Session = Depends(get_db), current_client: ClientOut = Depends(get_current_client)):
     id = current_client.id
     return create_dht(db, dht_in, int(id))

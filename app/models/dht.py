@@ -7,7 +7,7 @@ class Dht(Base):
     __tablename__ = "dht"
 
     id = Column(Integer, primary_key=True, index=True)
-    humidade = Column(Float, index=True)
+    humidity = Column(Float, index=True)
     temperature_c = Column(Float, index=True)
     temperature_f = Column(Float, index=True)
     date_time = Column(DateTime, default=datetime.utcnow)

@@ -98,3 +98,6 @@ docker-compose exec <db_name> psql -U <user>
 # verificando os containers
 docker ps -a
 ```
+
+<a href="./app/README.md">documentação da API</a>
+<a href="./esp32/README.md">documentação do Esp32</a>
