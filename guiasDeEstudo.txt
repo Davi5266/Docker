@@ -1,0 +1,17 @@
+/* YOUTUBE */
+https://www.youtube.com/watch?v=n7uYMoQesIE&list=PLf-O3X2-mxDk3yebbffbo3sGmwdFxiNPi
+https://www.youtube.com/@LinuxTips/playlists
+https://www.youtube.com/watch?v=n7uYMoQesIE&list=PLf-O3X2-mxDk3yebbffbo3sGmwdFxiNPi
+https://www.youtube.com/watch?v=Wm99C_f7Kxw&list=PLf-O3X2-mxDn1VpyU2q3fuI6YYeIWp5rR
+
+/* DOCS DOCKER */
+https://docs.docker.com/reference/cli/docker/stack/
+https://docs.docker.com/engine/swarm/stack-deploy/
+https://docs.docker.com/reference/samples/
+
+/* GITHUB EXAMPLES */
+https://github.com/badtuxx/giropops-monitoring
+https://github.com/badtuxx?tab=repositories
+https://github.com/dockersamples/example-voting-app
+https://github.com/dockersamples
+
